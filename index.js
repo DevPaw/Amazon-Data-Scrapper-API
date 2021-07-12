@@ -19,7 +19,7 @@ app.get('/products/:productId', async (req, res) => {
 
     try {
         const response = await request(`${baseUrl}&url=https://www.amazon.in/dp/${productId}`);
-
+        
         res.json(JSON.parse(response));
 
     } catch (error) {
